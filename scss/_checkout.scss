@@ -1,0 +1,80 @@
+@import './vartiables';
+@import './swiper';
+@import './header';
+@import './footer';
+
+.cart-total-container{
+    .checkout-container{
+        width: 50%;
+        background: #fff;
+        margin: 2em auto;
+        padding: 1em 3em;
+        border-radius: 5px;
+        box-shadow: $shadow;
+        h2{
+            color: #333;
+            font-weight: 600;
+            font-size: 2.5em;
+            margin-bottom: .5em;
+        }
+        section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                margin: .5em 0;
+                font-weight: 550;
+                font-size: 1em;
+            }
+        }
+        .coupon-section{
+            form{
+                label{
+                    display: inline-block;
+                    margin: .8em 0;
+                }
+                input{
+                    margin: 1em 0;
+                    padding: .5em;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 1px solid #ddd;
+                    width: 100%;
+                }
+                button{
+                    padding: .5em 1.5em;
+                    background: royalblue;
+                    border: none;
+                    outline: none;
+                    width: 150px;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin: .5em 0;
+                    transition: .5s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .checkout-btn{
+            padding: .5em 1.5em;
+                    background: royalblue;
+                    border: none;
+                    outline: none;
+                    width: 150px;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin: .5em 0;
+                    width: 350px;
+                    transition: .5s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background: #000;
+                        color: #fff;
+                    }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import './vartiables';
+
+
+main{
+    .account-container{
+        margin: 2em 0;
+
+        form{
+            h2{
+                font-size: 2em;
+                margin-bottom: 1em;
+                color: #333;
+            }
+            box-shadow: 0 0 10px #ddd;
+            border-radius: 8px;
+            padding: 2em 1em;
+            margin: auto;
+            section{
+                margin: 1em 0;
+                input{
+                    width: 100%;
+                    margin: 1em 0 ;
+                    padding: .71em .5em;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+                label{
+                    color: #333;
+                }
+            }
+            button[type="submit"]{
+                background: none;
+                border: none;
+                outline: none;
+                padding: .5em 1.5em;
+                background: royalblue;
+                color: #fff;
+                width: 80%;
+                font-size: 1.15em;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width:750px){
+    main{
+        .account-container{
+            padding: 1em;
+            width: 70%;
+            margin: 2em auto;
+            form{
+                h2{
+                    font-size: 2.5em;
+                }
+                padding: 2em;
+                margin: 1em auto;
+                width: 70%;
+            }
+        }
+    }   
+}

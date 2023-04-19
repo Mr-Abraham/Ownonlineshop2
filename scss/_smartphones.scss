@@ -1,0 +1,150 @@
+@import './vartiables';
+
+.smartphones-cateogries{
+    background-color: #fff;
+    padding: .5em;
+    .container{
+        .brands-cateogary{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(45px,1fr));
+            gap: .5em;
+            place-items: center;
+            text-align: center;
+            margin: 1em;
+            .brand{
+                border: 1px solid #ccc ;
+                padding: .5em;
+                border-radius: 5px;
+                    figure{
+                        padding: .3em;
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                            p{
+                                font-weight: 600;
+                                margin-top: .5em;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
+// smatphones
+.smartphones-result-container{
+    background: #fff;
+    padding: .5em;
+    h2{
+        margin-bottom: .51em;
+    }
+    .smartphones-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+        // border: $redborder;
+        .smartphone{
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px#ddd;
+            display: grid;
+            place-items: center;
+            margin: 1.5em .2em;
+            padding: .5em ;
+            border-radius: 8px;
+            transition: .4s ease;
+            position: relative;
+            &:hover{
+                transform: scale(1.05);
+            }
+            .discount-banner{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+            figure{
+                    figcaption{
+                        line-height: 1.7;
+                    h3{
+                        font-size: .95em;
+                        margin-top: .5em;
+                        // margin-bottom: .5em;
+                    }
+                    p{
+                        color: $lightpink;
+                        margin-bottom: .5em;
+                    }
+                }
+            }
+        }
+            .purchase-section{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                button{
+                    @include purchasedesign;
+                    &:hover{
+                        background: #000;
+                        transition: .5s ease;
+                    }
+                }
+            }
+        }
+
+    }
+.showmore{
+    .showmore_container{
+        display: grid;
+        place-items: center;
+        .showmore__btn{
+            // font-size: 1em;
+            // background: none;
+            // border: none;
+            // outline: none;
+            // background: royalblue;
+            // padding: .7em 1em;
+            // color: #fff;
+            // border-radius: 10px;
+            // text-align: center;
+            // width: 200px;
+            // cursor: pointer;
+            // box-shadow: 0 0 10px #ccc;
+            // transition: .5s ease;
+            // &:hover{
+            //     background-color: #000;
+            //     color: #fff;
+            //     transform:scale(1.1);
+            // }
+            @include showmoredesign;
+        }
+    }
+}
+}
+// Pagination
+
+@media screen and (min-width:650px) {
+    .smartphones-result-container{
+        .smartphones-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            grid-row-gap: 2em;
+            grid-column-gap: 1em;
+        }
+    }
+    .smartphones-cateogries{
+        .container{
+            .brands-cateogary{
+                display: flex;
+                align-items: center;
+                gap: 1.5em;
+                padding: 0;
+                padding: 1em 0;
+                flex-wrap: wrap;
+            .brand{
+                margin:0;
+            }
+            }
+
+        }
+    }
+}

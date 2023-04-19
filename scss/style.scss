@@ -1,0 +1,141 @@
+@import './vartiables';
+@import './signup';
+@import './footer';
+@import './header';
+@import './swiper';
+@import './product';
+@import './search';
+@import './smartphones';
+@import './orders';
+@import './profile';
+@import './account';
+@import './cart';
+@import './checkout';
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::selection{
+    background: hsl(212,55%,90%);
+    color: #000;
+}
+
+body{
+    background: linear-gradient( 60deg,#eee,#ebf4f5,#fff);
+}
+
+img{
+    max-width: 100%;
+}
+.cateogary-container{
+    .cateogaries{
+        // display: flex;
+        // flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(70px,80px));
+        gap: 1.5em .5em;
+        margin: 0;
+        padding: 1em;
+        .cateogary-box{
+            margin: 0;
+            padding: 0;
+            width: 100px;
+            p{
+                font-size: .5em;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+.hero-wrapper-slider{
+    width: 100%;
+    border: 1px solid red;
+    .swiper{
+        border: $redborder;
+        width: 100%;
+    }
+}
+
+.hero-wrapper{
+    .hero-wrapper_product{
+        padding: .51em 1em;
+    }
+}
+
+
+
+@media (min-width:750px){
+    .cart-navigation{
+        width: 400px;
+        form{
+            display: flex;
+            width: 80%;
+            input{
+                width: 100%;
+                padding: 0 .5em;
+            }
+        }
+    }
+    .cateogary-container{
+        padding: 0;
+        padding: 1em 0;
+        cursor: pointer;
+        .cateogaries{
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            gap: 1.5em;
+            height: 200px;
+            object-fit: cover;
+            background: #fff;
+            .cateogary-box{
+                height: 150px;
+                width: 150px;
+                padding: .3em;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color:#000;
+                }
+                img{
+                    @include imgagegit;
+                }
+                p{
+                    margin: .5em 0;
+                    font-weight: 500;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    .hero-wrapper{
+        display: flex;
+        gap: 1.5em;
+        padding: 1em;
+        .hero-wrapper_product{
+            width: 100%;
+            background: #fff;
+            padding: 1em;
+            border-radius: 5px;
+            a{
+                text-decoration: none;
+                color: #000;
+                text-align: center;
+                line-height: 1.5;
+                display: inline-block;
+                p{
+                    margin: .51em 0;
+                }
+            }
+        }
+    }
+}
+
+

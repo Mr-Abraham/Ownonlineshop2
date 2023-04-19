@@ -1,0 +1,157 @@
+@import './footer';
+@import './vartiables';
+@import './header';
+
+
+main{
+    padding: 0 1em;
+    .orders-container{
+        h2{
+            margin-bottom: .5em;
+            font-weight: 100;
+            color: #333;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+        }
+        .orders_status{
+            button{
+                background: none;
+                border: none;
+                padding: .5em 1em;
+                border: 1px solid #000;
+                border-radius: 5px;
+                margin: .51em .2em;
+                font-size: .75em;
+                outline: none;
+                cursor: pointer;
+                &:hover{
+                    background: #000;
+                    color: #fff;
+                 }
+            }
+            .orders-status-active{
+                background: #000;
+                color:#fff;
+            }
+        }
+        .orders{
+            // border: $blackborder;
+            margin: .5em 0;
+            .order{
+                display: flex;
+                gap: 1em;
+                margin: .5em 0;
+                border-bottom: 1px solid #ccc;
+                section{
+                    width: 100%;
+                    margin: 1em 0;
+                    // border: $redborder;
+                    position: relative;
+                    h3{
+                        font-size: .65em;
+                        margin-bottom: .5em;
+                        color: #000;
+                    }
+                    p{
+                        margin-bottom: .5em;
+                        font-size: .7em;
+                    }
+                    .red{
+                        color: $lightpink;
+                    }
+                    .green{
+                        color: mediumseagreen;
+                    }
+                    .cancel_btn{
+                        background:none;
+                        border: none;
+                        outline: none;
+                        background: red;
+                        color: #fff;
+                        margin-top: 1em;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        width: 100%;
+                        font-size: .7em;
+                        text-align: center;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media  (min-width:750px) {
+    main{
+        padding: 1em;
+        .orders-container{
+            width: 90%;
+            margin: auto;
+            padding: .5em;
+            h2{
+                font-weight: 400;
+                font-size: 2em;
+                margin-left: .2em;
+            }
+            .orders_status{
+                button{
+                     padding: .5em 1.5em;
+                     margin: .51em;
+                     transition: .5s ease;
+                     &:hover{
+                        background: #000;
+                        color: #fff;
+                     }
+                }
+                .orders-status-active{
+                    background: #000;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+            .orders{
+                margin: .5em 0;
+                padding: .5em;
+                .order{
+                    display: flex;
+                    gap: 1.5em;
+                    margin: .5em 0;
+                    border-bottom: 1px solid #ccc;
+                    section{
+                        width: 100%;
+                        margin: 1em 0;
+                        h3{
+                            font-size: 1.1em;
+                        }
+                        p{
+                            margin-bottom: .5em;
+                            font-size: 1.1em;
+                        }
+                        .red{
+                            color: $lightpink;
+                        }
+                        .green{
+                            color: mediumseagreen;
+                        }
+                        .cancel_btn{
+                            border: none;
+                            outline: none;
+                            padding: .5em 1.5em;
+                            background: red;
+                            color: #fff;
+                            margin-top: 1em;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

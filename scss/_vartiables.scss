@@ -1,0 +1,190 @@
+
+@mixin verticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin  imgagegit {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+$lightpink : #E36387;
+$shadow : 0px 0 5px 0px rgba(0,0,0,.1);
+$redborder : 2px solid red;
+$blackborder : 2px solid #000;
+
+@mixin purchasedesign {
+    width: 100%;
+    background-color: royalblue;
+    color: #fff;
+    padding: .5em 1.5em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: .2em;
+    cursor: pointer;
+}
+
+@mixin showmoredesign {
+    font-size: 1em;
+            background: none;
+            border: none;
+            outline: none;
+            background: royalblue;
+            padding: .7em 1em;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ccc;
+            transition: .5s ease;
+            &:hover{
+                background-color: #000;
+                color: #fff;
+                transform:scale(1.1);
+            }
+}
+
+// Review Profile Design
+
+@mixin profileDesign {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.showmore{
+    margin-top: 2em;
+    .showmore_container{
+        display: grid;
+place-items: center;
+        .showmore__btn{
+            @include showmoredesign;
+        }
+    }
+}
+
+.discount-banner{
+    display:grid;
+    place-items: center;
+    // border: $redborder;
+    width: 50px;
+    label{
+        font-size: .91em;
+        position: absolute;
+        font-weight: 600;
+    }
+    i{
+        font-size: 2.32em;
+        position: relative;
+        color: yellow;
+        scale: 1.21;
+    }
+      }
+
+      .profile-dropdown{
+        position: relative;
+        transform: scale(0,0);
+        transform-origin: center;
+        transition: .5s ease;
+        .profile-dropdown_list{
+            all: unset;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ddd;
+            border: 1px solid #ccc;
+            position: absolute;
+            width: 120px;
+            right: -10px;
+            top: 10px;
+            padding: .2em .5em;
+            li{
+                all: unset;
+                list-style: none;
+                display: block;
+                margin: .35em 0;
+                padding: .35em;
+                border-radius: 5px;
+                a{
+                    color: #000;
+                    font-size: 1em;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+      }
+
+      .active-profile-dropdown{
+        transform: scale(1,1);
+        z-index: 9999;
+      }
+
+    //   cart items count design
+    header{
+        nav{
+            .cart-navigation{
+                .cart-icon{
+                    position: relative;
+                    .items-count{
+                        position: absolute;
+                        top: -15px;
+                        left: 60%;
+                        transform: translateX(-60%);
+                        border: $blackborder;
+                        border-radius: 50%;
+                        background: #000;
+                        color: #fff;
+                        height: 20px;
+                        width: 20px;
+                        display: grid;
+                        place-items: center;
+                        font-size: .7em;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer-container{
+        padding: 2em;
+        h2{
+            margin-bottom: .5em;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .offers{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2em;
+            .offer{
+                border-radius: 5px;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    display: inline-block;
+                    p{
+                        margin: .851em 0;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    @mixin checkoutbtn {
+        text-align: center;
+            background: royalblue;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: .5em 1.5em;
+            color: #fff;
+            width: 200px;
+            display: inline-block;
+    }
