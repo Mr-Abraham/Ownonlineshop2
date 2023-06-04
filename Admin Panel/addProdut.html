@@ -1,104 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .addProductForm {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* border: 1px solid red; */
+        }
+
+        .addProductForm div {
+            width: 50%;
+            border: 1px solid black;
+            padding: 1em;
+            margin: .5em;
+        }
+
+        .container-left section label {
+            display: inline-block;
+            margin: .5em;
+        }
+
+        .container-left section input {
+            margin: .5em;
+        }
+
+        .short-spec {
+            width: 70%;
+            height: 50px;
+        }
+
+        .color-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .color-section button {
+            width: 100px;
+            margin: .2em .51em;
+        }
+
+        .container-right {
+            background: red;
+        }
+
+        .state-selector-container {
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0;
+        }
+
+        .state-selector-container section input[type="checkbox"] {
+            display: none;
+        }
+
+        .state-selector-container section label {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 130px;
+            text-align: center;
+            padding: .2em;
+            margin: .2em;
+        }
+    </style>
 </head>
+
 <body>
 
     <h3>Add Your Product</h3>
 
     <!-- <form action=""></form> -->
     <div class="product-form">
-        <form action="">
-            <section>
-                <label for="">State</label>
-                <select name="" id="">
-                    <option value="">Delhi</option>
-                    <option value="">Assam</option>
-                    <option value="">Sikkim</option>
-                    <option value="">Pune</option>
-                    <option value="">Mharashtra</option>
-                    <option value="">Uttar Pradesh</option>
-                    <option value="">Haryana</option>
-
-                </select>
-                <br>
-                <label for="">Shop No - </label>
-                <input type="text" placeholder="Shop No">
-            </section>
-            <section class="produt-details-section">
-                <label for="">Name</label>
-                <input type="text" placeholder="Product Name">
-                <br>
-                <label for="">Short Spec </label>
-                <input type="text" placeholder="Specification">
-                <br>
-                <label for="">Amount</label>
-                <input type="number" placeholder="Amount">
-                <br>
-                <label for="">Discount</label>
-                <input type="number" placeholder="Discount">
-                <br>
-                <label for="">Product Highlights</label>
-                <input type="text" placeholder="Product Highlights">
-                <br>
-                <label for="">Quantity</label>
-                <input type="number">
-                <br>
-                <label for="">Tags</label>
-                <input type="text" placeholder="tags">
-                <br>
-                <label for="">Other Details</label>
-                <input type="text" placeholder="Other Details">
-                <br>
-                <label for="">Images</label>
-                <input type="file" name="" id="" multiple>
-                <br>
-                <label for="">Cateogary</label>
-                <select name="" id="">
-                    <option value="">sphone</option>
-                    <option value="">oneplus</option>
-                    <option value="">Sikkim</option>
-                    <option value="">Pune</option>
-                    <option value="">Mharashtra</option>
-                    <option value="">Uttar Pradesh</option>
-                    <option value="">Haryana</option>
-                </select>
-                <br>
-                <label for="">Sub Cateogary</label>
-                <select name="" id="">
-                    <option value="">Iphone</option>
-                    <option value="">mi</option>
-                    <option value="">Sikkim</option>
-                    <option value="">Pune</option>
-                    <option value="">Mharashtra</option>
-                    <option value="">Uttar Pradesh</option>
-                    <option value="">Haryana</option>
-
-                </select>
-            </section>
-
-            <section class="whereToShow">
-                <h3>Where To Show</h3>
-                <p>State</p>
-                <div style="border: 1px solid #000; width: 20%;" class="state-box">
-                <button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button>
-                </div>
-                <div class="city-box">
-                    <p>City</p>
-                    <input type="text">
-                </div>
-                <div class="zip-box">
-                    <p>Pin code</p>
+        <form class="addProductForm" action="">
+            <div class="container-left">
+                <section>
+                    <label for="">State</label>
+                    <select name="" id="">
+                        <option value="">Delhi</option>
+                        <option value="">Haryana</option>
+                        <option value="">Andhra Pradesh</option>
+                        <option value="">Manipur</option>
+                        <option value="">Sikkim</option>
+                        <option value="">Arunachal Pradesh</option>
+                        <option value="">Himachal Pradesh</option>
+                        <option value="">Meghalaya</option>
+                        <option value="">Tamilnadu</option>
+                        <option value="">Assam</option>
+                        <option value="">Jharkhand</option>
+                        <option value="">Mizoram</option>
+                        <option value="">Telangana</option>
+                        <option value="">Bihar</option>
+                        <option value="">Karnataka</option>
+                        <option value="">Nagaland</option>
+                        <option value="">Tripura</option>
+                        <option value="">Chattisgarh</option>
+                        <option value="">Kerala</option>
+                        <option value="">Odisha</option>
+                        <option value="">Uttarakhand</option>
+                        <option value="">Goa</option>
+                        <option value="">Madhya Pradesh</option>
+                        <option value="">Punjab</option>
+                        <option value="">Uttar Pradesh</option>
+                        <option value="">Gujarat</option>
+                        <option value="">Maharashtra</option>
+                        <option value="">Rajasthan</option>
+                        <option value="">West Bengal</option>
+                    </select>
+                    <br>
+                    <label for="">Shop No - </label>
+                    <input type="text" placeholder="Shop No">
+                </section>
+                <section class="produt-details-section">
+                    <label for="">Name</label>
+                    <input size="50" type="text" placeholder="Product Name">
+                    <br>
+                    <label for="">Short Spec </label>
+                    <input class="short-spec" type="text" placeholder="Specification">
+                    <br>
+                    <label for="">Amount</label>
+                    <input type="number" placeholder="Amount">
+                    <br>
+                    <label for="">Discount</label>
+                    <input type="number" placeholder="Discount">
+                    <br>
+                    <label for="">Product Highlights</label>
+                    <!-- <input type="text" placeholder="Product Highlights"> -->
+                    <textarea name="" id="" cols="60" rows="8"></textarea>
+                    <br>
+                    <label for="">Quantity</label>
+                    <select name="" id="">
+                        <option value="">Nos</option>
+                        <option value="">KG</option>
+                        <option value="">Liter</option>
+                    </select>
                     <input type="number">
-                </div>
-            </section>
+                    <br>
+                    <label for="">Tags</label>
+                    <!-- <input type="text" placeholder="tags"> -->
+                    <textarea name="" id="" cols="60" rows="8"></textarea>
+                    <br>
+                    <label for="">Other Details</label>
+                    <!-- <input type="text" placeholder="Other Details"> -->
+                    <textarea name="" id="" cols="60" rows="8"></textarea>
+                    <br>
+                    <label for="">Images</label>
+                    <input type="file" name="" id="" multiple>
+                    <br>
+                    <label for="">Cateogary</label>
+                    <select name="" id="">
+                        <option value="">Electronics</option>
+                        <option value="">Accessoris</option>
+                    </select>
+                    <br>
+                    <label for="">Sub Cateogary</label>
+                    <select name="" id="">
+                        <option value="">Iphone</option>
+                        <option value="">mi</option>
+                        <option value="">Sikkim</option>
+                        <option value="">Pune</option>
+                        <option value="">Mharashtra</option>
+                        <option value="">Uttar Pradesh</option>
+                        <option value="">Haryana</option>
+                    </select>
+                </section>
+                <section ">
+                    <div class=" color-section">
+                    <button style="background-color: red;color: #fff;">Red</button>
+                    <input type="number">
+                    <button style="background-color: black;color: #fff;">Black</button>
+                    <input type="number" name="" id="">
+                    <button style="background-color: blue;">Blue</button>
+                    <input type="number" name="" id="">
+                    <button style="background-color: yellow;">Yellow</button>
+                    <input type="number" name="" id="">
+            </div>
             <br>
-            <button type="submit">Release</button>
-        </form>
+
+            <button
+                style="padding: .5em 1.5em; background-color: #000; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">500
+                ML</button>
+            <button
+                style="padding: .5em 1.5em; background-color: #000; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">1KG</button>
+
+            <br>
+            <button
+                style="padding: .5em 1.5em; background-color: royalblue; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">Door
+                Step Pickup</button>
+            </section>
+    </div>
+
+    <div class="container-right">
+        <section class="whereToShow">
+            <h3>Where To Show</h3>
+            <p>State</p>
+            <div class="state-selector-container" style="border: 1px solid #000; width: 80%;" class="state-box">
+                <!-- <div class="state-box-item" style="border: 1px solid #000;"></div> -->
+                <section>
+                    <label for="Delhi">Delhi</label>
+                    <input type="checkbox" name="Delhi" id="Delhi">
+                </section>
+                <section>
+                    <label for="Haryana">Haryana</label>
+                    <input type="checkbox" name="Haryana" id="Haryana">
+                </section>
+                <section>
+                    <label for="Bihar">Bihar</label>
+                    <input type="checkbox" name="Bihar" id="Bihar">
+                </section>
+                <section>
+                    <label for="Uttar Pradesh">Uttar Pradesh</label>
+                    <input type="checkbox" name="Uttar Pradesh" id="Uttar Pradesh">
+                </section>
+                <section>
+                    <label for="Jharkhand">Jharkhand</label>
+                    <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                </section>
+                <section>
+                    <label for="Sikkim">Sikkim</label>
+                    <input type="checkbox" name="Sikkim" id="Sikkim">
+                </section>
+                <section>
+                    <label for="Tamil Nadu">Tamil Nadu</label>
+                    <input type="checkbox" name="Tamil Nadu" id="Tamil Nadu">
+                </section>
+                <section>
+                    <label for="Tripura">Tripura</label>
+                    <input type="checkbox" name="Tripura" id="Tripura">
+                </section>
+                <section>
+                    <label for="Uttarakhand">Uttarakhand</label>
+                    <input type="checkbox" name="Uttarakhand" id="Uttarakhand">
+                </section>
+                <section>
+                    <label for="West Bengal">West Bengal</label>
+                    <input type="checkbox" name="West Bengal" id="West Bengal">
+                </section>
+                <section>
+                    <label for="Rajasthan">Rajasthan</label>
+                    <input type="checkbox" name="Rajasthan" id="Rajasthan">
+                </section>
+                <section>
+                    <label for="Punjab">Punjab</label>
+                    <input type="checkbox" name="Punjab" id="Punjab">
+                </section>
+                <section>
+                    <label for="Odisha">Odisha</label>
+                    <input type="checkbox" name="Odisha" id="Odisha">
+                </section>
+                <section>
+                    <label for="Nagaland">Nagaland</label>
+                    <input type="checkbox" name="Nagaland" id="Nagaland">
+                </section>
+                <section>
+                    <label for="Mizoram">Mizoram</label>
+                    <input type="checkbox" name="Mizoram" id="Mizoram">
+                </section>
+                <section>
+                    <label for="Meghalaya">Meghalaya</label>
+                    <input type="checkbox" name="Meghalaya" id="Meghalaya">
+                </section>
+                <section>
+                    <label for="Manipur">Manipur</label>
+                    <input type="checkbox" name="Manipur" id="Manipur">
+                </section>
+                <section>
+                    <label for="Karnataka">Karnataka</label>
+                    <input type="checkbox" name="Karnataka" id="Karnataka">
+                </section>
+                <section>
+                    <label for="Kerala">Kerala</label>
+                    <input type="checkbox" name="Kerala" id="Kerala">
+                </section>
+                <section>
+                    <label for="Jharkhand">Jharkhand</label>
+                    <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                </section>
+                <section>
+                    <label for="Assam">Assam</label>
+                    <input type="checkbox" name="Assam" id="Assam">
+                </section>
+                <section>
+                    <label for="Goa">Goa</label>
+                    <input type="checkbox" name="Goa" id="Goa">
+                </section>
+                <section>
+                    <label for="Gujarat">Gujarat</label>
+                    <input type="checkbox" name="Gujarat" id="Gujarat">
+                </section>
+                <section>
+                    <label for="Arunachal Pradesh">Arunachal Pradesh</label>
+                    <input type="checkbox" name="Arunachal Pradesh" id="Arunachal Pradesh">
+                </section>
+                <section>
+                    <label for="Andhra Pradesh">Andhra Pradesh</label>
+                    <input type="checkbox" name="Andhra Pradesh" id="Andhra Pradesh">
+                </section>
+                <section>
+                    <label for="Himachal Pradesh">Himachal Pradesh</label>
+                    <input type="checkbox" name="Himachal Pradesh" id="Himachal Pradesh">
+                </section>
+                <section>
+                    <label for="Maharashtra">Maharashtra</label>
+                    <input type="checkbox" name="Maharashtra" id="Maharashtra">
+                </section>
+                <section>
+                    <label for="Madhya Pradesh">Madhya Pradesh</label>
+                    <input type="checkbox" name="Madhya Pradesh" id="Madhya Pradesh">
+                </section>
+            </div>
+            <div class="city-box">
+                <p style="margin-bottom: .5em;">City</p>
+                <input style="height:30px;padding: .3em;" type="text" size="50">
+            </div>
+            <div class="zip-box">
+                <p>Pin code</p>
+                <!-- <input type="number"> -->
+                <textarea name="" id="" cols="50" rows="3"></textarea>
+            </div>
+            <br>
+            <button
+                style="background-color: royalblue; padding: .5em 1.5em; border: none; border-radius: 7px; color: #fff;"
+                type="submit">Release</button>
+        </section>
+    </div>
+    </form>
     </div>
 </body>
+
 </html>

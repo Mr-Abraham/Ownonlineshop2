@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispatch</title>
 </head>
+
 <body>
     <header>
         <div class="container-header">
@@ -29,7 +31,7 @@
             </form>
         </div>
     </header>
-<br>
+    <br>
     <div class="dispatch-search">
         <form action="">
             <label for="">Search Order By</label>
@@ -41,91 +43,92 @@
             <button type="submit">Search</button>
         </form>
     </div>
-<br>
-<div class="packed-orders" style="display:flex; align-items:center; gap: .5em; width: 350px;">
-    <p>Packed </p>
-    <button>Today</button>
-    <button>Yesterday</button>
-    <button>All</button>
-    <p>OR</p>
-    <p>Range</p>
-    <label for="">From</label>
-    <input  type="date" name="Date" id="date">
-    <label for="">To</label>
-    <input type="date" name="Date"  value="Date" id="" style="width:150px">
-</div>
+    <br>
+    <div class="packed-orders" style="display:flex; align-items:center; gap: .5em; width: 350px;">
+        <p>Packed </p>
+        <button>Today</button>
+        <button>Yesterday</button>
+        <button>All</button>
+        <p>OR</p>
+        <p>Range</p>
+        <label for="">From</label>
+        <input type="date" name="" id="">
+        <label for="">To</label>
+        <input type="date" name="" id="">
+    </div>
 
-<div class="dispatch-result">
-    <h2>Result</h2>
-    <table>
-        <tr>
-            <th>S. No</th>
-            <th>Order ID</th>
-            <th>Barcode ID</th>
-            <th>Product Name</th>
-            <th> QTY</th>
-            <th>Select/De-Select</th>
-            <th><button>Slect All</button></th>
-            <th><button>De- Select All</button></th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>12356</td>
-            <td>123ABC</td>
-            <td>Apple PRO</td>
-            <td>5</td>
-            <td><input type="checkbox"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>12356</td>
-            <td>123ABC</td>
-            <td>Apple PRO</td>
-            <td>5</td>
-            <td><input type="checkbox"></td>
-        </tr>
-    </table>
-<section>
-    <label for="">Sort By</label>
-    <select name="" id="">
-        <option value="Old To New">Old To New</option>
-        <option value="New to Old">New to Old</option>
-    </select>
-</section>
-</div>
-
-<div class="dispatch-action">
-    <h2>Action</h2>
-    <form action="" style="display: flex; gap: .5em; align-items: center;">
+    <div class="dispatch-result">
+        <h2>Result</h2>
+        <table>
+            <tr>
+                <th>S. No</th>
+                <th>Order ID</th>
+                <th>Barcode ID</th>
+                <th>Product Name</th>
+                <th> QTY</th>
+                <th>Select/De-Select</th>
+                <th><button>Slect All</button></th>
+                <th><button>De- Select All</button></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>12356</td>
+                <td>123ABC</td>
+                <td>Apple PRO</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12356</td>
+                <td>123ABC</td>
+                <td>Apple PRO</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
         <section>
-            <label for="">For</label>
+            <label for="">Sort By</label>
             <select name="" id="">
-                <option value="">Delhi</option>
-                <option value="">Assam</option>
-                <option value="">Sikkim</option>
-                <option value="">Pune</option>
-                <option value="">Mharashtra</option>
-                <option value="">Uttar Pradesh</option>
-                <option value="">Haryana</option>
+                <option value="Old To New">Old To New</option>
+                <option value="New to Old">New to Old</option>
             </select>
         </section>
-        <section>
-            <label for="">To</label>
-            <input type="text" placeholder="User ID Or Number">
-        </section>
-        <button>Dispatch Selected</button>
-    </form>
-</div>
-<br>
-<div class="final-dispatch">
-    <h2>Final Dispatch</h2>
-    <form action="" style="display: flex; gap: .5em; align-items: center;">
-        <section>
-            <label for="">To</label>
-            <input type="text">
-        </section>
-        <button>Final Dispatch</button>
-    </form>
-</div>
-</body> 
+    </div>
+
+    <div class="dispatch-action">
+        <h2>Action</h2>
+        <form action="" style="display: flex; gap: .5em; align-items: center;">
+            <section>
+                <label for="">For</label>
+                <select name="" id="">
+                    <option value="">Delhi</option>
+                    <option value="">Assam</option>
+                    <option value="">Sikkim</option>
+                    <option value="">Pune</option>
+                    <option value="">Mharashtra</option>
+                    <option value="">Uttar Pradesh</option>
+                    <option value="">Haryana</option>
+                </select>
+            </section>
+            <section>
+                <label for="">To</label>
+                <input type="text" placeholder="User ID Or Number">
+            </section>
+            <button>Dispatch Selected</button>
+        </form>
+    </div>
+    <br>
+    <div class="final-dispatch">
+        <h2>Final Dispatch</h2>
+        <form action="" style="display: flex; gap: .5em; align-items: center;">
+            <section>
+                <label for="">To</label>
+                <input type="text">
+            </section>
+            <button>Final Dispatch</button>
+        </form>
+    </div>
+</body>
+
 </html>
