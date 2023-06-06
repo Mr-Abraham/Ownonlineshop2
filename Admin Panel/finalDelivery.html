@@ -83,6 +83,41 @@
             font-size: 1em;
             cursor: pointer;
         }
+
+        .reverseBtn {
+            background-color: hsl(212, 70%, 25%);
+            padding: .51em 1.5em;
+            text-align: center;
+            border-radius: 5px;
+            outline: none;
+            color: #fff;
+            border: none;
+            width: 180px;
+            margin-top: 1em;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .reverse-details {
+            display: none;
+        }
+
+        .reverse-details input {
+            padding: .5em;
+            margin: .5em 0;
+            outline: none;
+            border: 1px solid #000;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        .activeReverse {
+            display: block;
+        }
     </style>
 </head>
 
@@ -116,11 +151,33 @@
                 <button>Send OTP</button>
                 <input type="number" name="" id="">
             </div>
-            <button class="submitButton" type="submit">Mark Delivered</button>
+            <div class="delivery-details deliveryBtn">
+                <button class="submitButton" type="submit">Mark Delivered</button>
+                <button onclick="activeReverse()">Reverse</button>
+            </div>
+            <div class="reverse-details">
+                <label for="">Revrse To</label>
+                <input type="text" placeholder="Reverse To">
+                <label for="">Enter Your Password</label>
+                <input type="password" name="" id="" placeholder="Enter Your Password">
+                <button class="reverseBtn" onclick="deactivateReverse()">Reverse</button>
+            </div>
+
             <a style="text-align:center; display: inline-block; margin-top: 1em;" href="./delivery.html">Back To
                 Dashboard</a>
         </div>
     </div>
+    <script>
+        const reverseContainer = document.querySelector('.reverse-details');
+        const reverseBtn = document.querySelector('.reverseBtn')
+
+        function activeReverse() {
+            reverseContainer.classList.add('activeReverse')
+        }
+        function deactivateReverse() {
+            reverseContainer.classList.remove('activeReverse')
+        }
+    </script>
 </body>
 
 </html>
