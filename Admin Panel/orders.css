@@ -20,8 +20,6 @@ body{
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
     gap: 1em;
-    /* padding; */
-    background: red;
 }
 
 .orders-container div{

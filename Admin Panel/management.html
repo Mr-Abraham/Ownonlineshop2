@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Management</title>
     <link rel="stylesheet" href="./management.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            padding: 1em;
+        }
+
+        .savechangebtn button {
+            background: royalblue;
+            padding: .5em 1.5em;
+            margin-top: 1em;
+            outline: none;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <div class="ordermgmtctn">
         <div class="ordermgmt">
@@ -35,19 +60,19 @@
                 <button>Not Available</button>
             </div>
             <form action="">
-            <label for="">Search By Product Id</label>
-            <input type="text" placeholder="Product ID">
-            <button type="submit">Search</button>
+                <label for="">Search By Product Id</label>
+                <input type="text" placeholder="Product ID">
+                <button type="submit">Search</button>
             </form>
             <br>
             <form action="">
-            <label for="">Search by Status</label>
-            <select name="" id="">
-                <option value="Active">Active</option>
-                <option value="De Activate">De Activate</option>
-                <option value="Not available">Not Available</option>
-            </select>
-            <button type="submit">Search</button>
+                <label for="">Search by Status</label>
+                <select name="" id="">
+                    <option value="Active">Active</option>
+                    <option value="De Activate">De Activate</option>
+                    <option value="Not available">Not Available</option>
+                </select>
+                <button type="submit">Search</button>
             </form>
             <div class="row-second">
                 <table>
@@ -59,41 +84,45 @@
                         <th>Status</th>
                         <th>Release Date</th>
                         <th>Select</th>
+
                     </tr>
-                        <tr>
-                            <td><label for="one">1</label></td>
-                            <td>123456</td>
-                            <td>Samsung S20 128GB </td>
-                            <td><img class="product-image" width="100px" src="../Images/Products/Samsung A73/002_Galaxy_A73_5G_gray_back​.jpg" alt=""></td>
-                            <td>Active</td>
-                            <td>12-03-2023 15:18:24</td>
-                            <td><input name="one" id="one" type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="two">2</label></td>
-                            <td>123456</td>
-                            <td>Samsung S20 128GB </td>
-                            <td><img width="100px" src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg" alt=""></td>
-                            <td>Not Available</td>
-                            <td>12-03-2023 15:18:24</td>
-                            <td><input name="two" id="two" type="checkbox"></td>
+                    <tr>
+                        <td><label for="one">1</label></td>
+                        <td>123456</td>
+                        <td>Samsung S20 128GB </td>
+                        <td><img class="product-image" width="100px"
+                                src="../Images/Products/Samsung A73/002_Galaxy_A73_5G_gray_back​.jpg" alt=""></td>
+                        <td>Active</td>
+                        <td>12-03-2023 15:18:24</td>
+                        <td><input name="one" id="one" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="two">2</label></td>
+                        <td>123456</td>
+                        <td>Samsung S20 128GB </td>
+                        <td><img width="100px" src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg"
+                                alt=""></td>
+                        <td>Not Available</td>
+                        <td>12-03-2023 15:18:24</td>
+                        <td><input name="two" id="two" type="checkbox"></td>
                     </tr>
                     <tr>
                         <td id="123"><label for="three">3</label></td>
                         <td><label for="three">456123</label></td>
                         <td id="123"><label for="three">Samsung</label> </td>
-                        <td id="123"><img width="100px" src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg" alt=""></td>
+                        <td id="123"><img width="100px"
+                                src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg" alt=""></td>
                         <td id="123">De Activated</td>
                         <td id="123">12-03-2023 15:18:24</td>
                         <td><input name="three" id="three" type="checkbox"></td>
-                </tr>
+                    </tr>
                 </table>
                 <button>Select All</button>
                 <button>De-Select All</button>
             </div>
         </div>
         <div class="ordermgmt2">
-            <h1>Order Management</h1>
+            <h1>Product Management</h1>
             <div class="container">
                 <form action="">
                     <label for="State">State</label>
@@ -118,19 +147,19 @@
                 <button>Not Available</button>
             </div>
             <form action="">
-            <label for="">Search By Product Id</label>
-            <input type="text" placeholder="Product ID">
-            <button type="submit">Search</button>
+                <label for="">Search By Product Id</label>
+                <input type="text" placeholder="Product ID">
+                <button type="submit">Search</button>
             </form>
             <br>
             <form action="">
-            <label for="">Search by Status</label>
-            <select name="" id="">
-                <option value="Active">Active</option>
-                <option value="De Activate">De Activate</option>
-                <option value="Not available">Not Available</option>
-            </select>
-            <button type="submit">Search</button>
+                <label for="">Search by Status</label>
+                <select name="" id="">
+                    <option value="Active">Active</option>
+                    <option value="De Activate">De Activate</option>
+                    <option value="Not available">Not Available</option>
+                </select>
+                <button type="submit">Search</button>
             </form>
             <div class="row-second">
                 <table>
@@ -141,49 +170,41 @@
                         <th>Image</th>
                         <th>Status</th>
                         <th>Release Date</th>
-                        <th>Select</th>
-                    </tr>
-                        <tr>
-                            <td><label for="one">1</label></td>
-                            <td>123456</td>
-                            <td>Samsung S20 128GB </td>
-                            <td><img class="product-image" width="100px" src="../Images/Products/Samsung A73/002_Galaxy_A73_5G_gray_back​.jpg" alt=""></td>
-                            <td>Active</td>
-                            <td>12-03-2023 15:18:24</td>
-                            <td><input name="one" id="one" type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="two">2</label></td>
-                            <td>123456</td>
-                            <td>Samsung S20 128GB </td>
-                            <td><img width="100px" src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg" alt=""></td>
-                            <td>Not Available</td>
-                            <td>12-03-2023 15:18:24</td>
-                            <td><input name="two" id="two" type="checkbox"></td>
+                        <th>Price</th>
+                        <th>Discounted Price</th>
+                        <th>Discount</th>
+                        <th>Edit</th>
                     </tr>
                     <tr>
-                        <td id="123"><label for="three">3</label></td>
-                        <td><label for="three">456123</label></td>
-                        <td id="123"><label for="three">Samsung</label> </td>
-                        <td id="123"><img width="100px" src="../Images/Products/Samsung A53/013_Galaxy_A53_5G_blue_back_l30.jpg" alt=""></td>
-                        <td id="123">De Activated</td>
-                        <td id="123">12-03-2023 15:18:24</td>
-                        <td><input name="three" id="three" type="checkbox"></td>
-                </tr>
+                        <td><label for="one">1</label></td>
+                        <td>123456</td>
+                        <td>Samsung S20 128GB </td>
+                        <td><img class="product-image" width="100px"
+                                src="../Images/Products/Samsung A73/002_Galaxy_A73_5G_gray_back​.jpg" alt=""></td>
+                        <td>Active</td>
+                        <td>12-03-2023 15:18:24</td>
+                        <td><input type="number"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number"></td>
+                        <td><a href="./addProdut.html">Edit</a></td>
+                    </tr>
                 </table>
                 <button>Select All</button>
                 <button>De-Select All</button>
             </div>
         </div>
     </div>
-    
-<footer>
-    <label for="">Sort by</label>
-    <select name="" id="">
-        <option value="New To Old">New To Old</option>
-        <option value="Old to New">Old to New</option>
-    </select>
-</footer>
 
+    <footer>
+        <label for="">Sort by</label>
+        <select name="" id="">
+            <option value="New To Old">New To Old</option>
+            <option value="Old to New">Old to New</option>
+        </select>
+    </footer>
+    <div class="savechangebtn">
+        <button type="submit" class="saveChangeBtn">Save Changes</button>
+    </div>
 </body>
+
 </html>

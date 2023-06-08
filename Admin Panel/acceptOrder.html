@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accept Orders</title>
 </head>
+
 <body>
     <header>
         <div class="container-header">
@@ -29,7 +31,7 @@
             </form>
         </div>
     </header>
-<br>
+    <br>
     <div class="dispatch-search">
         <form action="">
             <label for="">Search Order By</label>
@@ -44,75 +46,76 @@
             <button type="submit">Search</button>
         </form>
     </div>
-<br>
-<div class="packed-orders" style="display:flex; align-items:center; gap: .5em; width: 350px;">
-    <p>Release </p>
-    <button>Today</button>
-    <button>Yesterday</button>
-    <button>All</button>
-    <p>OR</p>
-    <p>Range</p>
-    <label for="">From</label>
-    <input  type="date" name="Date" id="date">
-    <label for="">To</label>
-    <input type="date" name="Date"  value="Date" id="" style="width:150px">
-</div>
-<section class="whereToShow">
-    <h3>Dispatched To</h3>
-    <p>State</p>
-    <div style="border: 1px solid #000; width: 20%;" class="state-box">
-    <button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button>
+    <br>
+    <div class="packed-orders" style="display:flex; align-items:center; gap: .5em; width: 350px;">
+        <p>Release </p>
+        <button>Today</button>
+        <button>Yesterday</button>
+        <button>All</button>
+        <p>OR</p>
+        <p>Range</p>
+        <label for="">From</label>
+        <input type="date" name="Date" id="date">
+        <label for="">To</label>
+        <input type="date" name="Date" value="Date" id="" style="width:150px">
     </div>
-    <div class="city-box">
-        <p>City</p>
-        <input type="text">
-    </div>
-    <div class="zip-box">
-        <p>Pin code</p>
-        <input type="number">
-    </div>
-</section>
+    <section class="whereToShow">
+        <h3>Dispatched To</h3>
+        <p>State</p>
+        <div style="border: 1px solid #000; width: 20%;" class="state-box">
+            <button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button><button>Delhi</button>
+        </div>
+        <div class="city-box">
+            <p>City</p>
+            <input type="text">
+        </div>
+        <div class="zip-box">
+            <p>Pin code</p>
+            <input type="number">
+        </div>
+    </section>
 
-<div class="dispatch-result">
-    <h2>Result</h2>
-    <table>
-        <tr>
-            <th>S. No</th>
-            <th>Order ID</th>
-            <th>Barcode ID</th>
-            <th>Product Name</th>
-            <th> QTY</th>
-            <th>Select/De-Select</th>
-            <th><button>Slect All</button></th>
-            <th><button>De- Select All</button></th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>12356</td>
-            <td>123ABC</td>
-            <td>Apple PRO</td>
-            <td>5</td>
-            <td><input type="checkbox"></td>
-            <td><a href="#"><button>List</button></a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>12356</td>
-            <td>123ABC</td>
-            <td>Apple PRO</td>
-            <td>5</td>
-            <td><input type="checkbox"></td>
-        </tr>
-    </table>
+    <div class="dispatch-result">
+        <h2>Result</h2>
+        <table>
+            <tr>
+                <th>S. No</th>
+                <th>Order ID</th>
+                <th>Barcode ID</th>
+                <th>Product Name</th>
+                <th> QTY</th>
+                <th>Select/De-Select</th>
+                <th><button>Slect All</button></th>
+                <th><button>De- Select All</button></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>12356</td>
+                <td>123ABC</td>
+                <td>Apple PRO</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+                <td><a href="#"><button>List</button></a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12356</td>
+                <td>123ABC</td>
+                <td>Apple PRO</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
 
-    
-<section>
-    <label for="">Sort By</label>
-    <select name="" id="">
-        <option value="Old To New">Old To New</option>
-        <option value="New to Old">New to Old</option>
-    </select>
-</section>
-</div>
-</body> 
+
+        <section>
+            <label for="">Sort By</label>
+            <select name="" id="">
+                <option value="Old To New">Old To New</option>
+                <option value="New to Old">New to Old</option>
+            </select>
+        </section>
+    </div>
+</body>
+
 </html>

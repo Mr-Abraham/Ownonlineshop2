@@ -11,29 +11,35 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .main-heading {
+            margin: .5em;
+            color: red;
         }
 
         .addProductForm {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            /* border: 1px solid red; */
         }
 
-        .addProductForm div {
-            width: 50%;
-            border: 1px solid black;
-            padding: 1em;
+        .addProductForm>div {
+            padding: .51em 1em;
             margin: .5em;
+            border: 1px solid saddlebrown;
+            border-radius: 5px;
         }
 
         .container-left section label {
             display: inline-block;
-            margin: .5em;
+            margin: 0;
         }
 
         .container-left section input {
-            margin: .5em;
+            margin: .5em .2em;
+            padding: .2em;
         }
 
         .short-spec {
@@ -49,10 +55,7 @@
         .color-section button {
             width: 100px;
             margin: .2em .51em;
-        }
-
-        .container-right {
-            background: red;
+            color: #fff;
         }
 
         .state-selector-container {
@@ -60,10 +63,6 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             padding: 0;
-        }
-
-        .state-selector-container section input[type="checkbox"] {
-            display: none;
         }
 
         .state-selector-container section label {
@@ -74,15 +73,160 @@
             padding: .2em;
             margin: .2em;
         }
+
+        .quanititywithcolor div label {
+            background: royalblue;
+            width: 120px;
+            text-align: center;
+            padding: .2em 1em;
+        }
+
+        .price-container {
+            /* border: 1px solid red; */
+            padding: 0;
+            margin: 2em 0;
+        }
+
+        .price-container .addColorsBtn {
+            padding: .5em 1.5em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: royalblue;
+            color: #fff;
+            margin: 1em 0;
+        }
+
+        .price-container h2 {
+            margin-bottom: .35em;
+        }
+
+        .colors-container {
+            margin: 2em 0;
+        }
+
+        .colors-container h2 {
+            margin-bottom: .5em;
+        }
+
+        .image-container {
+            margin: 1em 0;
+        }
+
+        .image-container h2 {
+            margin-bottom: .3em;
+        }
+
+        .doorstepbtn {
+            background-color: royalblue;
+            padding: .5em 1.5em;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .colors-container div .redColor {
+            outline: none;
+            border: none;
+            background: red;
+            color: white;
+        }
+
+        .colors-container div .blackColor {
+            outline: none;
+            border: none;
+            background: rgb(2, 0, 0);
+            color: white;
+        }
+
+        .colors-container div .white {
+            outline: none;
+            border: none;
+            background: rgb(255, 255, 255);
+            color: black;
+            border: 1px solid #000;
+        }
+
+        .colors-container div .Golden {
+            outline: none;
+            border: none;
+            background: gold;
+            color: black;
+        }
+
+        .colors-container div .greyColor {
+            outline: none;
+            border: none;
+            background: grey;
+            color: #fff;
+        }
+
+        .colors-container div .greyColor {
+            outline: none;
+            border: none;
+            background: grey;
+            color: #fff;
+        }
+
+        .colors-container div .roseGold {
+            outline: none;
+            border: none;
+            background: rgb(221, 128, 120);
+            color: #000;
+        }
+
+        .colors-container div .silverColor {
+            outline: none;
+            border: none;
+            background: silver;
+            color: #000;
+        }
+
+        .colors-container div .purpleColor {
+            outline: none;
+            border: none;
+            background: purple;
+            color: #fff;
+        }
+
+        .colors-container div .greenColor {
+            outline: none;
+            border: none;
+            background: green;
+            color: #fff;
+        }
+
+        .colors-container div .yellowColor {
+            outline: none;
+            border: none;
+            background: yellow;
+            color: #000;
+        }
+
+        .colors-container div .navy {
+            outline: none;
+            border: none;
+            background: navy;
+            color: #fff;
+        }
+
+        .colors-container div .skyblue {
+            outline: none;
+            border: none;
+            background: skyblue;
+            color: #000;
+        }
     </style>
 </head>
 
 <body>
 
-    <h3>Add Your Product</h3>
 
     <!-- <form action=""></form> -->
     <div class="product-form">
+        <h1 class="main-heading">Add Your Product</h1>
         <form class="addProductForm" action="">
             <div class="container-left">
                 <section>
@@ -129,22 +273,9 @@
                     <label for="">Short Spec </label>
                     <input class="short-spec" type="text" placeholder="Specification">
                     <br>
-                    <label for="">Amount</label>
-                    <input type="number" placeholder="Amount">
-                    <br>
-                    <label for="">Discount</label>
-                    <input type="number" placeholder="Discount">
-                    <br>
                     <label for="">Product Highlights</label>
-                    <!-- <input type="text" placeholder="Product Highlights"> -->
                     <textarea name="" id="" cols="60" rows="8"></textarea>
                     <br>
-                    <label for="">Quantity</label>
-                    <select name="" id="">
-                        <option value="">Nos</option>
-                        <option value="">KG</option>
-                        <option value="">Liter</option>
-                    </select>
                     <input type="number">
                     <br>
                     <label for="">Tags</label>
@@ -155,9 +286,10 @@
                     <!-- <input type="text" placeholder="Other Details"> -->
                     <textarea name="" id="" cols="60" rows="8"></textarea>
                     <br>
-                    <label for="">Images</label>
-                    <input type="file" name="" id="" multiple>
+                    <!-- <label for="">Images</label>
+                    <input type="file" name="" id="" multiple> -->
                     <br>
+                    <h2 style="margin-bottom: .5em;">Select Cateogary</h2>
                     <label for="">Cateogary</label>
                     <select name="" id="">
                         <option value="">Electronics</option>
@@ -175,167 +307,246 @@
                         <option value="">Haryana</option>
                     </select>
                 </section>
-                <section ">
-                    <div class=" color-section">
-                    <button style="background-color: red;color: #fff;">Red</button>
-                    <input type="number">
-                    <button style="background-color: black;color: #fff;">Black</button>
-                    <input type="number" name="" id="">
-                    <button style="background-color: blue;">Blue</button>
-                    <input type="number" name="" id="">
-                    <button style="background-color: yellow;">Yellow</button>
-                    <input type="number" name="" id="">
-            </div>
-            <br>
+                <!-- Upload Product Quantity starts -->
+                <section>
+                    <div class="price-container">
+                        <h2>Product Pricing</h2>
+                        <label for="">Actual Price</label>
+                        <input type="text">
+                        <label for="">Discount Amount</label>
+                        <input type="text">
+                        <label for="">Quantity</label>
+                        <input type="number" name="" id="">
+                        <button class="addColorsBtn">Add Colors</button>
+                    </div>
+                    <div class="quanititywithcolor">
 
-            <button
-                style="padding: .5em 1.5em; background-color: #000; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">500
-                ML</button>
-            <button
-                style="padding: .5em 1.5em; background-color: #000; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">1KG</button>
+                        <div class="colors-container">
+                            <h2>Add Your Colors</h2>
+                            <div>
+                                <label class="redColor">Red</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="white">White</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="blackColor">Black</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="blueColor">Blue</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="greyColor">Grey</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="silverColor">Silver</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="Golden">Golden</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="roseGold">Rose Gold</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="purpleColor">Purple</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="greenColor">Green</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="yellowColor">Yellow</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="navy">Navy Blue</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                            <div>
+                                <label class="skyblue">Sky Blue</label>
+                                <input type="number">
+                                <input type="number">
+                                <input type="number">
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <h2>Upload Product Images</h2>
+                            <input type="file">
+                        </div>
+                    </div>
+                </section>
+                <button class="doorstepbtn">Door Step Pickup</button>
+                <!-- Upload Product Quantity ends -->
+            </div>
 
-            <br>
-            <button
-                style="padding: .5em 1.5em; background-color: royalblue; margin-top: .5em; border: none; border-radius: 10px;color: #fff;">Door
-                Step Pickup</button>
-            </section>
-    </div>
-
-    <div class="container-right">
-        <section class="whereToShow">
-            <h3>Where To Show</h3>
-            <p>State</p>
-            <div class="state-selector-container" style="border: 1px solid #000; width: 80%;" class="state-box">
-                <!-- <div class="state-box-item" style="border: 1px solid #000;"></div> -->
-                <section>
-                    <label for="Delhi">Delhi</label>
-                    <input type="checkbox" name="Delhi" id="Delhi">
-                </section>
-                <section>
-                    <label for="Haryana">Haryana</label>
-                    <input type="checkbox" name="Haryana" id="Haryana">
-                </section>
-                <section>
-                    <label for="Bihar">Bihar</label>
-                    <input type="checkbox" name="Bihar" id="Bihar">
-                </section>
-                <section>
-                    <label for="Uttar Pradesh">Uttar Pradesh</label>
-                    <input type="checkbox" name="Uttar Pradesh" id="Uttar Pradesh">
-                </section>
-                <section>
-                    <label for="Jharkhand">Jharkhand</label>
-                    <input type="checkbox" name="Jharkhand" id="Jharkhand">
-                </section>
-                <section>
-                    <label for="Sikkim">Sikkim</label>
-                    <input type="checkbox" name="Sikkim" id="Sikkim">
-                </section>
-                <section>
-                    <label for="Tamil Nadu">Tamil Nadu</label>
-                    <input type="checkbox" name="Tamil Nadu" id="Tamil Nadu">
-                </section>
-                <section>
-                    <label for="Tripura">Tripura</label>
-                    <input type="checkbox" name="Tripura" id="Tripura">
-                </section>
-                <section>
-                    <label for="Uttarakhand">Uttarakhand</label>
-                    <input type="checkbox" name="Uttarakhand" id="Uttarakhand">
-                </section>
-                <section>
-                    <label for="West Bengal">West Bengal</label>
-                    <input type="checkbox" name="West Bengal" id="West Bengal">
-                </section>
-                <section>
-                    <label for="Rajasthan">Rajasthan</label>
-                    <input type="checkbox" name="Rajasthan" id="Rajasthan">
-                </section>
-                <section>
-                    <label for="Punjab">Punjab</label>
-                    <input type="checkbox" name="Punjab" id="Punjab">
-                </section>
-                <section>
-                    <label for="Odisha">Odisha</label>
-                    <input type="checkbox" name="Odisha" id="Odisha">
-                </section>
-                <section>
-                    <label for="Nagaland">Nagaland</label>
-                    <input type="checkbox" name="Nagaland" id="Nagaland">
-                </section>
-                <section>
-                    <label for="Mizoram">Mizoram</label>
-                    <input type="checkbox" name="Mizoram" id="Mizoram">
-                </section>
-                <section>
-                    <label for="Meghalaya">Meghalaya</label>
-                    <input type="checkbox" name="Meghalaya" id="Meghalaya">
-                </section>
-                <section>
-                    <label for="Manipur">Manipur</label>
-                    <input type="checkbox" name="Manipur" id="Manipur">
-                </section>
-                <section>
-                    <label for="Karnataka">Karnataka</label>
-                    <input type="checkbox" name="Karnataka" id="Karnataka">
-                </section>
-                <section>
-                    <label for="Kerala">Kerala</label>
-                    <input type="checkbox" name="Kerala" id="Kerala">
-                </section>
-                <section>
-                    <label for="Jharkhand">Jharkhand</label>
-                    <input type="checkbox" name="Jharkhand" id="Jharkhand">
-                </section>
-                <section>
-                    <label for="Assam">Assam</label>
-                    <input type="checkbox" name="Assam" id="Assam">
-                </section>
-                <section>
-                    <label for="Goa">Goa</label>
-                    <input type="checkbox" name="Goa" id="Goa">
-                </section>
-                <section>
-                    <label for="Gujarat">Gujarat</label>
-                    <input type="checkbox" name="Gujarat" id="Gujarat">
-                </section>
-                <section>
-                    <label for="Arunachal Pradesh">Arunachal Pradesh</label>
-                    <input type="checkbox" name="Arunachal Pradesh" id="Arunachal Pradesh">
-                </section>
-                <section>
-                    <label for="Andhra Pradesh">Andhra Pradesh</label>
-                    <input type="checkbox" name="Andhra Pradesh" id="Andhra Pradesh">
-                </section>
-                <section>
-                    <label for="Himachal Pradesh">Himachal Pradesh</label>
-                    <input type="checkbox" name="Himachal Pradesh" id="Himachal Pradesh">
-                </section>
-                <section>
-                    <label for="Maharashtra">Maharashtra</label>
-                    <input type="checkbox" name="Maharashtra" id="Maharashtra">
-                </section>
-                <section>
-                    <label for="Madhya Pradesh">Madhya Pradesh</label>
-                    <input type="checkbox" name="Madhya Pradesh" id="Madhya Pradesh">
+            <div class=" container-right">
+                <section class="whereToShow">
+                    <h3>Where To Show</h3>
+                    <p>State</p>
+                    <div class="state-selector-container" style="border: 1px solid #000; width: 80%;" class="state-box">
+                        <!-- <div class="state-box-item" style="border: 1px solid #000;"></div> -->
+                        <section>
+                            <label for="Delhi">Delhi</label>
+                            <input type="checkbox" name="Delhi" id="Delhi">
+                        </section>
+                        <section>
+                            <label for="Haryana">Haryana</label>
+                            <input type="checkbox" name="Haryana" id="Haryana">
+                        </section>
+                        <section>
+                            <label for="Bihar">Bihar</label>
+                            <input type="checkbox" name="Bihar" id="Bihar">
+                        </section>
+                        <section>
+                            <label for="Uttar Pradesh">Uttar Pradesh</label>
+                            <input type="checkbox" name="Uttar Pradesh" id="Uttar Pradesh">
+                        </section>
+                        <section>
+                            <label for="Jharkhand">Jharkhand</label>
+                            <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                        </section>
+                        <section>
+                            <label for="Sikkim">Sikkim</label>
+                            <input type="checkbox" name="Sikkim" id="Sikkim">
+                        </section>
+                        <section>
+                            <label for="Tamil Nadu">Tamil Nadu</label>
+                            <input type="checkbox" name="Tamil Nadu" id="Tamil Nadu">
+                        </section>
+                        <section>
+                            <label for="Tripura">Tripura</label>
+                            <input type="checkbox" name="Tripura" id="Tripura">
+                        </section>
+                        <section>
+                            <label for="Uttarakhand">Uttarakhand</label>
+                            <input type="checkbox" name="Uttarakhand" id="Uttarakhand">
+                        </section>
+                        <section>
+                            <label for="West Bengal">West Bengal</label>
+                            <input type="checkbox" name="West Bengal" id="West Bengal">
+                        </section>
+                        <section>
+                            <label for="Rajasthan">Rajasthan</label>
+                            <input type="checkbox" name="Rajasthan" id="Rajasthan">
+                        </section>
+                        <section>
+                            <label for="Punjab">Punjab</label>
+                            <input type="checkbox" name="Punjab" id="Punjab">
+                        </section>
+                        <section>
+                            <label for="Odisha">Odisha</label>
+                            <input type="checkbox" name="Odisha" id="Odisha">
+                        </section>
+                        <section>
+                            <label for="Nagaland">Nagaland</label>
+                            <input type="checkbox" name="Nagaland" id="Nagaland">
+                        </section>
+                        <section>
+                            <label for="Mizoram">Mizoram</label>
+                            <input type="checkbox" name="Mizoram" id="Mizoram">
+                        </section>
+                        <section>
+                            <label for="Meghalaya">Meghalaya</label>
+                            <input type="checkbox" name="Meghalaya" id="Meghalaya">
+                        </section>
+                        <section>
+                            <label for="Manipur">Manipur</label>
+                            <input type="checkbox" name="Manipur" id="Manipur">
+                        </section>
+                        <section>
+                            <label for="Karnataka">Karnataka</label>
+                            <input type="checkbox" name="Karnataka" id="Karnataka">
+                        </section>
+                        <section>
+                            <label for="Kerala">Kerala</label>
+                            <input type="checkbox" name="Kerala" id="Kerala">
+                        </section>
+                        <section>
+                            <label for="Jharkhand">Jharkhand</label>
+                            <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                        </section>
+                        <section>
+                            <label for="Assam">Assam</label>
+                            <input type="checkbox" name="Assam" id="Assam">
+                        </section>
+                        <section>
+                            <label for="Goa">Goa</label>
+                            <input type="checkbox" name="Goa" id="Goa">
+                        </section>
+                        <section>
+                            <label for="Gujarat">Gujarat</label>
+                            <input type="checkbox" name="Gujarat" id="Gujarat">
+                        </section>
+                        <section>
+                            <label for="Arunachal Pradesh">Arunachal Pradesh</label>
+                            <input type="checkbox" name="Arunachal Pradesh" id="Arunachal Pradesh">
+                        </section>
+                        <section>
+                            <label for="Andhra Pradesh">Andhra Pradesh</label>
+                            <input type="checkbox" name="Andhra Pradesh" id="Andhra Pradesh">
+                        </section>
+                        <section>
+                            <label for="Himachal Pradesh">Himachal Pradesh</label>
+                            <input type="checkbox" name="Himachal Pradesh" id="Himachal Pradesh">
+                        </section>
+                        <section>
+                            <label for="Maharashtra">Maharashtra</label>
+                            <input type="checkbox" name="Maharashtra" id="Maharashtra">
+                        </section>
+                        <section>
+                            <label for="Madhya Pradesh">Madhya Pradesh</label>
+                            <input type="checkbox" name="Madhya Pradesh" id="Madhya Pradesh">
+                        </section>
+                    </div>
+                    <div class="city-box">
+                        <p style="margin-bottom: .5em;">City</p>
+                        <input style="height:30px;padding: .3em;" type="text" size="50">
+                    </div>
+                    <div class="zip-box">
+                        <p>Pin code</p>
+                        <!-- <input type="number"> -->
+                        <textarea name="" id="" cols="50" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <button
+                        style="background-color: royalblue; padding: .5em 1.5em; border: none; border-radius: 7px; color: #fff;"
+                        type="submit">Release</button>
                 </section>
             </div>
-            <div class="city-box">
-                <p style="margin-bottom: .5em;">City</p>
-                <input style="height:30px;padding: .3em;" type="text" size="50">
-            </div>
-            <div class="zip-box">
-                <p>Pin code</p>
-                <!-- <input type="number"> -->
-                <textarea name="" id="" cols="50" rows="3"></textarea>
-            </div>
-            <br>
-            <button
-                style="background-color: royalblue; padding: .5em 1.5em; border: none; border-radius: 7px; color: #fff;"
-                type="submit">Release</button>
-        </section>
-    </div>
-    </form>
+        </form>
     </div>
 </body>
 
