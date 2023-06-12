@@ -6,14 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
-    <link rel="stylesheet" href="./orders.css">
-    <!-- <style></style> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* search container */
+        .order-search-container form {
+            padding: .5em;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .order-search-container form label {
+            color: hsl(212, 70%, 15%);
+        }
+
+        .order-search-container form input {
+            padding: .3em;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #ddd;
+        }
+
+        .order-search-container form button {
+            padding: 0 1em;
+            background: royalblue;
+            color: #fff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* search container ends */
+
+        .orders-container {
+            padding: .51em;
+            margin: 1em 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5em;
+        }
+
+        .orders-container h2 {
+            margin-bottom: .5em;
+        }
+
+        .orders-container a {
+            text-decoration: none;
+            color: hsl(212, 60%, 25%);
+            display: inline-block;
+            margin: .2em;
+        }
+
+        .orders-container .order {
+            margin: .5em 0;
+            box-shadow: 0 0 10px #ddd;
+            padding: .5em;
+            border-radius: 5px;
+        }
+
+        .orders-container .order #UserID {
+            color: tomato;
+        }
+    </style>
 </head>
 
 <body>
     <div class="order-search-container">
         <form action="">
-            <!-- <p>Search </p> -->
             <button type="submit">Search</button>
             <section>
                 <label for="">State</label>
@@ -32,11 +97,25 @@
     <hr>
     <div class="orders-container">
         <div class="allOrders-container">
-            <h2>All Orders</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea asperiores deleniti sit eos, fuga
-                dolorem temporibus, natus itaque quisquam vel facere autem quis. Tempore cumque possimus libero ea
-                inventore, natus ut, mollitia nostrum esse ipsa molestiae quibusdam quo expedita odit aperiam dolore
-                itaque rem sunt labore ducimus excepturi. Iusto!</p>
+            <h2>Fresh Orders</h2>
+            <div class="order">
+                <a href="./order.html">123456</a>
+                <br>
+                <a href="./order.html">Timestamp</a>
+                <br>
+                <a href="./order.html">Product</a>
+                <br>
+                <a href="">Last Person - <span id="UserID">SK8424K</span></a>
+            </div>
+            <div class="order">
+                <a href="./order.html">654123</a>
+                <br>
+                <a href="./order.html">Timestamp</a>
+                <br>
+                <a href="./order.html">Product</a>
+                <br>
+                <a href="">Last Person - <span id="UserID">SK8424K</span></a>
+            </div>
             <section>
                 <label for="">Sort By - </label>
                 <select name="" id="">
@@ -47,10 +126,15 @@
         </div>
         <div class="pendingOrder-container">
             <h2>Pending Orders</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, ex assumenda nihil, accusamus hic
-                placeat ipsum minima aperiam consequatur eaque aspernatur reprehenderit facilis omnis, similique enim
-                fugiat aliquid non dignissimos rem. Natus nobis corrupti nam totam! Similique, facilis enim facere
-                beatae magnam, quis incidunt sit excepturi cum laborum, eaque aspernatur.</p>
+            <div class="order">
+                <a href="./order.html">123456</a>
+                <br>
+                <a href="./order.html">Timestamp</a>
+                <br>
+                <a href="./order.html">Product</a>
+                <br>
+                <a href="">Last Person - <span id="UserID">SK8424K</span></a>
+            </div>
             <section>
                 <label for="">Sort By - </label>
                 <select name="" id="">
@@ -61,13 +145,15 @@
         </div>
         <div class="returnOrders-container">
             <h2>Return Orders</h2>
-            <ul>
-                <!-- <li><a href="">123456789 - 12-03-2023- DL12</a></li> -->
-                <a href="./order.html">
-                    <p>123456 - 12-01-2023 - Dl12</p>
-                    <p>Samsung Galaxy J12</p>
-                </a>
-            </ul>
+            <div class="order">
+                <a href="./order.html">BArcode ID</a>
+                <br>
+                <a href="./order.html">Timestamp</a>
+                <br>
+                <a href="./order.html">Product</a>
+                <br>
+                <a href="">Last Person - <span id="UserID">SK8424K</span></a>
+            </div>
             <section>
                 <label for="">Sort By - </label>
                 <select name="" id="">

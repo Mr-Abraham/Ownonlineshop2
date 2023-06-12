@@ -6,6 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accept Orders</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            padding: 1em;
+            margin: 1em;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        section {
+            margin: 2em 0;
+        }
+
+        h2 {
+            margin: .6em 0;
+        }
+
+        button {
+            padding: .2em 1em;
+        }
+
+        .selectorBtns {
+            position: absolute;
+            right: 15px;
+            top: -30px;
+            display: flex;
+            justify-content: space-between;
+            gap: .5em;
+            align-items: center;
+        }
+
+        .resultTable {
+            position: relative;
+        }
+
+        input {
+            padding: .2em;
+            /* outline: none; */
+        }
+
+        .dispatchBtn {
+            background: royalblue;
+            padding: .7em 1.5em;
+            width: 150px;
+            border: none;
+            color: #fff;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,12 +126,10 @@
         <button>Today</button>
         <button>Yesterday</button>
         <button>All</button>
-        <p>OR</p>
-        <p>Range</p>
-        <label for="">From</label>
-        <input type="date" name="Date" id="date">
-        <label for="">To</label>
-        <input type="date" name="Date" value="Date" id="" style="width:150px">
+        <label for="fromdaterange">From</label>
+        <input type="date" />
+        <label for="todaterange">To</label>
+        <input type="date" />
     </div>
     <section class="whereToShow">
         <h3>Dispatched To</h3>
@@ -76,38 +148,115 @@
     </section>
 
     <div class="dispatch-result">
+
+        <!-- list details section starts -->
+        <section>
+            <h2>List Details</h2>
+            <div>
+                <table>
+                    <tr>
+                        <th>Dispatched By</th>
+                        <th>Dispatched Date</th>
+                        <th>Dispatched For</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Neeraj</a></td>
+                        <td><a href="">4 June 2023</a></td>
+                        <td><a href="">Mumbai</a></td>
+                        <td><a href="">14s</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Neeraj</a></td>
+                        <td><a href="">4 June 2023</a></td>
+                        <td><a href="">Bihar</a></td>
+                        <td><a href="">14s</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Neeraj</a></td>
+                        <td><a href="">4 June 2023</a></td>
+                        <td><a href="">Jaipur</a></td>
+                        <td><a href="">14s</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Neeraj</a></td>
+                        <td><a href="">4 June 2023</a></td>
+                        <td><a href="">Haryan</a></td>
+                        <td><a href="">14s</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- list detail section ends -->
+
+
+
+
         <h2>Result</h2>
-        <table>
-            <tr>
-                <th>S. No</th>
-                <th>Order ID</th>
-                <th>Barcode ID</th>
-                <th>Product Name</th>
-                <th> QTY</th>
-                <th>Select/De-Select</th>
-                <th><button>Slect All</button></th>
-                <th><button>De- Select All</button></th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>12356</td>
-                <td>123ABC</td>
-                <td>Apple PRO</td>
-                <td>5</td>
-                <td><input type="checkbox"></td>
-                <td><a href="#"><button>List</button></a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>12356</td>
-                <td>123ABC</td>
-                <td>Apple PRO</td>
-                <td>5</td>
-                <td><input type="checkbox"></td>
-            </tr>
-        </table>
-
-
+        <!-- result section starts -->
+        <div class="resultTable">
+            <table>
+                <div class="selectorBtns">
+                    <button>Slect All</button>
+                    <button>De- Select All</button>
+                </div>
+                <tr>
+                    <th>S. No</th>
+                    <th>Order ID</th>
+                    <th>Barcode ID</th>
+                    <th>Product Name</th>
+                    <th>Dispatched For</th>
+                    <th> QTY</th>
+                    <th>Select/De-Select</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>12356</td>
+                    <td>123ABC</td>
+                    <td>Apple PRO</td>
+                    <td>Mumbai</td>
+                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>12356</td>
+                    <td>123ABC</td>
+                    <td>Apple PRO</td>
+                    <td>Mumbai</td>
+                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>12356</td>
+                    <td>123ABC</td>
+                    <td>Apple PRO</td>
+                    <td>Mumbai</td>
+                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>12356</td>
+                    <td>123ABC</td>
+                    <td>Apple PRO</td>
+                    <td>Mumbai</td>
+                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>12356</td>
+                    <td>123ABC</td>
+                    <td>Apple PRO</td>
+                    <td>Mumbai</td>
+                    <td>5</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- result section ends -->
         <section>
             <label for="">Sort By</label>
             <select name="" id="">
@@ -115,7 +264,9 @@
                 <option value="New to Old">New to Old</option>
             </select>
         </section>
+        <button class="dispatchBtn">Dispatch</button>
     </div>
+
 </body>
 
 </html>
