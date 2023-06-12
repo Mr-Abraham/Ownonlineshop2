@@ -53,7 +53,7 @@
         }
 
         .search-container {
-            padding: .5em 1em;
+            padding: .5em;
             margin: .5em 0;
         }
 
@@ -64,25 +64,24 @@
         .search-container form {
             display: flex;
             align-items: center;
-            gap: 1.5em;
+            gap: .5em;
         }
 
         .search-container form input {
-            padding: .5em;
+            padding: .3em;
             border-radius: 5px;
             border: 1px solid #ccc;
             outline: none;
         }
 
         .search-container form button {
-            padding: .45em 1em;
+            padding: .30em .5em;
             background: none;
             border: 1px solid #000;
             outline: none;
             border-radius: 3px;
             cursor: pointer;
             width: 150px;
-
         }
 
         .search_filter {
@@ -239,6 +238,14 @@
                 <label for="">Product ID</label>
                 <input type="text">
             </div>
+            <div class="search-container_search_field">
+                <label for="">City</label>
+                <input type="text">
+            </div>
+            <div class="search-container_search_field">
+                <label for="">Pincode</label>
+                <input type="text">
+            </div>
             <button type="submit">Search Now</button>
         </form>
     </div>
@@ -363,7 +370,7 @@
                     <option value="New to Old">New to Old</option>
                 </select>
             </section>
-            <button type="submit" class="dispatchBtn">Dispatch</button>
+            <button type="submit" class="dispatchBtn">Accept</button>
         </form>
     </div>
 </body>
