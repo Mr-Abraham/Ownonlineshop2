@@ -103,6 +103,14 @@
 
         .colors-container {
             margin: 2em 0;
+            height: 0;
+            overflow: hidden;
+            transition: .5s ease;
+        }
+
+        .active-color-container {
+            height: 558px;
+            overflow: auto;
         }
 
         .colors-container h2 {
@@ -218,6 +226,22 @@
             background: skyblue;
             color: #000;
         }
+
+        .state-selector-container section input[type="checkbox"] {
+            display: none;
+        }
+
+        .state-selector-container section label {
+            transition: all .5s ease;
+        }
+
+        .state-selector-container section input[type="checkbox"]:checked+label {
+            background: royalblue;
+            color: #fff;
+            border: none;
+            transition: .5s ease;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -276,7 +300,6 @@
                     <label for="">Product Highlights</label>
                     <textarea name="" id="" cols="60" rows="8"></textarea>
                     <br>
-                    <input type="number">
                     <br>
                     <label for="">Tags</label>
                     <!-- <input type="text" placeholder="tags"> -->
@@ -317,7 +340,7 @@
                         <input type="text">
                         <label for="">Quantity</label>
                         <input type="number" name="" id="">
-                        <button class="addColorsBtn">Add Colors</button>
+                        <button onclick="showcolorContainer()" class="addColorsBtn" type="button">Add Colors</button>
                     </div>
                     <div class="quanititywithcolor">
 
@@ -416,119 +439,118 @@
                 <section class="whereToShow">
                     <h3>Where To Show</h3>
                     <p>State</p>
-                    <div class="state-selector-container" style="border: 1px solid #000; width: 80%;" class="state-box">
-                        <!-- <div class="state-box-item" style="border: 1px solid #000;"></div> -->
+                    <div class="state-selector-container" style="width: 80%;">
                         <section>
-                            <label for="Delhi">Delhi</label>
                             <input type="checkbox" name="Delhi" id="Delhi">
+                            <label for="Delhi">Delhi</label>
                         </section>
                         <section>
-                            <label for="Haryana">Haryana</label>
                             <input type="checkbox" name="Haryana" id="Haryana">
+                            <label for="Haryana">Haryana</label>
                         </section>
                         <section>
-                            <label for="Bihar">Bihar</label>
                             <input type="checkbox" name="Bihar" id="Bihar">
+                            <label for="Bihar">Bihar</label>
                         </section>
                         <section>
-                            <label for="Uttar Pradesh">Uttar Pradesh</label>
                             <input type="checkbox" name="Uttar Pradesh" id="Uttar Pradesh">
+                            <label for="Uttar Pradesh">Uttar Pradesh</label>
                         </section>
                         <section>
-                            <label for="Jharkhand">Jharkhand</label>
                             <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                            <label for="Jharkhand">Jharkhand</label>
                         </section>
                         <section>
-                            <label for="Sikkim">Sikkim</label>
                             <input type="checkbox" name="Sikkim" id="Sikkim">
+                            <label for="Sikkim">Sikkim</label>
                         </section>
                         <section>
-                            <label for="Tamil Nadu">Tamil Nadu</label>
                             <input type="checkbox" name="Tamil Nadu" id="Tamil Nadu">
+                            <label for="Tamil Nadu">Tamil Nadu</label>
                         </section>
                         <section>
-                            <label for="Tripura">Tripura</label>
                             <input type="checkbox" name="Tripura" id="Tripura">
+                            <label for="Tripura">Tripura</label>
                         </section>
                         <section>
-                            <label for="Uttarakhand">Uttarakhand</label>
                             <input type="checkbox" name="Uttarakhand" id="Uttarakhand">
+                            <label for="Uttarakhand">Uttarakhand</label>
                         </section>
                         <section>
-                            <label for="West Bengal">West Bengal</label>
                             <input type="checkbox" name="West Bengal" id="West Bengal">
+                            <label for="West Bengal">West Bengal</label>
                         </section>
                         <section>
-                            <label for="Rajasthan">Rajasthan</label>
                             <input type="checkbox" name="Rajasthan" id="Rajasthan">
+                            <label for="Rajasthan">Rajasthan</label>
                         </section>
                         <section>
-                            <label for="Punjab">Punjab</label>
                             <input type="checkbox" name="Punjab" id="Punjab">
+                            <label for="Punjab">Punjab</label>
                         </section>
                         <section>
-                            <label for="Odisha">Odisha</label>
                             <input type="checkbox" name="Odisha" id="Odisha">
+                            <label for="Odisha">Odisha</label>
                         </section>
                         <section>
-                            <label for="Nagaland">Nagaland</label>
                             <input type="checkbox" name="Nagaland" id="Nagaland">
+                            <label for="Nagaland">Nagaland</label>
                         </section>
                         <section>
-                            <label for="Mizoram">Mizoram</label>
                             <input type="checkbox" name="Mizoram" id="Mizoram">
+                            <label for="Mizoram">Mizoram</label>
                         </section>
                         <section>
-                            <label for="Meghalaya">Meghalaya</label>
                             <input type="checkbox" name="Meghalaya" id="Meghalaya">
+                            <label for="Meghalaya">Meghalaya</label>
                         </section>
                         <section>
-                            <label for="Manipur">Manipur</label>
                             <input type="checkbox" name="Manipur" id="Manipur">
+                            <label for="Manipur">Manipur</label>
                         </section>
                         <section>
-                            <label for="Karnataka">Karnataka</label>
                             <input type="checkbox" name="Karnataka" id="Karnataka">
+                            <label for="Karnataka">Karnataka</label>
                         </section>
                         <section>
-                            <label for="Kerala">Kerala</label>
                             <input type="checkbox" name="Kerala" id="Kerala">
+                            <label for="Kerala">Kerala</label>
                         </section>
                         <section>
-                            <label for="Jharkhand">Jharkhand</label>
                             <input type="checkbox" name="Jharkhand" id="Jharkhand">
+                            <label for="Jharkhand">Jharkhand</label>
                         </section>
                         <section>
-                            <label for="Assam">Assam</label>
                             <input type="checkbox" name="Assam" id="Assam">
+                            <label for="Assam">Assam</label>
                         </section>
                         <section>
-                            <label for="Goa">Goa</label>
                             <input type="checkbox" name="Goa" id="Goa">
+                            <label for="Goa">Goa</label>
                         </section>
                         <section>
-                            <label for="Gujarat">Gujarat</label>
                             <input type="checkbox" name="Gujarat" id="Gujarat">
+                            <label for="Gujarat">Gujarat</label>
                         </section>
                         <section>
-                            <label for="Arunachal Pradesh">Arunachal Pradesh</label>
                             <input type="checkbox" name="Arunachal Pradesh" id="Arunachal Pradesh">
+                            <label for="Arunachal Pradesh">Arunachal Pradesh</label>
                         </section>
                         <section>
-                            <label for="Andhra Pradesh">Andhra Pradesh</label>
                             <input type="checkbox" name="Andhra Pradesh" id="Andhra Pradesh">
+                            <label for="Andhra Pradesh">Andhra Pradesh</label>
                         </section>
                         <section>
-                            <label for="Himachal Pradesh">Himachal Pradesh</label>
                             <input type="checkbox" name="Himachal Pradesh" id="Himachal Pradesh">
+                            <label for="Himachal Pradesh">Himachal Pradesh</label>
                         </section>
                         <section>
-                            <label for="Maharashtra">Maharashtra</label>
                             <input type="checkbox" name="Maharashtra" id="Maharashtra">
+                            <label for="Maharashtra">Maharashtra</label>
                         </section>
                         <section>
-                            <label for="Madhya Pradesh">Madhya Pradesh</label>
                             <input type="checkbox" name="Madhya Pradesh" id="Madhya Pradesh">
+                            <label for="Madhya Pradesh">Madhya Pradesh</label>
                         </section>
                     </div>
                     <div class="city-box">
@@ -548,6 +570,13 @@
             </div>
         </form>
     </div>
+    <script>
+        const colorContainer = document.querySelector('.colors-container');
+        function showcolorContainer() {
+            colorContainer.classList.add('active-color-container');
+
+        }
+    </script>
 </body>
 
 </html>
