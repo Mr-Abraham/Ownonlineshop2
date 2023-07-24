@@ -13,6 +13,31 @@
             box-sizing: border-box;
         }
 
+        header {
+            padding: 1em;
+        }
+
+        header form input {
+            padding: .5em .5em;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #ddd;
+            color: crimson;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        header form button {
+            padding: .5em 1.5em;
+            width: 150px;
+            background: royalblue;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 5px;
+        }
+
         .CustomerDetails_firstRow {
             border: 1px solid red;
             padding: .51em .2em;
@@ -69,6 +94,23 @@
 </head>
 
 <body>
+    <header>
+        <form action="" style="display: flex;gap: 1em;">
+            <section>
+                <label for="">Email ID</label>
+                <input type="text">
+            </section>
+            <section>
+                <label for="">Mobile Number</label>
+                <input type="text">
+            </section>
+            <section>
+                <label for="">Adhar Number</label>
+                <input type="text">
+            </section>
+            <button type="submit">Search</button>
+        </form>
+    </header>
     <form action="">
         <div class="CustomerDetails_firstRow">
             <label for="Created">Created</label>
@@ -77,6 +119,8 @@
             <input type="text">
             <label for="Customer Number">Customer Number</label>
             <input type="text">
+            <button style="padding: .345em 1.5em; cursor: pointer;">Blacklist </button>
+            <button style="padding: .345em 1.5em; cursor: pointer;"> Un Blacklist </button>
         </div>
         <div class="customerDetails_secondRow">
             <section>

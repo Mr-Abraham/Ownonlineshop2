@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Requests</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .total-container {
+            display: flex;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #66cd8e;
+            width: 150px;
+            align-items: center;
+            justify-content: center;
+            padding: .5em;
+            color: #fff;
+            border-radius: 5px;
+            gap: .5em;
         }
 
         .search-container {
@@ -103,31 +118,12 @@
         .search_results section {
             margin: 1em 0;
         }
-
-        .total-container {
-            display: flex;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #66cd8e;
-            width: 150px;
-            align-items: center;
-            justify-content: center;
-            padding: .5em;
-            color: #fff;
-            border-radius: 5px;
-            gap: .5em;
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="total-container">
-        <p>Total -</p>
-        <p>2</p>
-    </div>
-    <div class="search-container">
+    <!-- <div class="search-container">
         <h2>Search Activity By</h2>
         <form action="">
             <div class="search-container_search_field">
@@ -191,123 +187,59 @@
         <h2>Filter Result By</h2>
         <button>Today</button>
         <button>Yesterday</button>
-    </div>
+    </div> -->
 
     <div class="activity-container">
-        <h2>Filter Activity</h2>
+        <h2>Filter Request</h2>
         <label for="">Activity</label>
         <select name="" id="">
-            <option value="Accept">Accept</option>
-            <option value="Dispatch">Dispatch</option>
-            <option value="Delete">Delete</option>
-            <option value="Reverse">Reverse</option>
-            <option value="Create">Create</option>
-            <option value="Blacklist">Blacklist</option>
-            <option value="Cancel">Cancel</option>
-            <option value="">Extraa</option>
-            <option value="">Extraa</option>
+            <option value="Accept">Blacklist</option>
+            <option value="Dispatch">Un Blacklist</option>
         </select>
     </div>
 
     <div class="search_results_list-container">
-        <h2>Activity Details</h2>
+        <h2>Requests Details</h2>
         <table>
             <tr>
                 <th>User ID</th>
                 <th>Date</th>
-                <th>Activity</th>
-                <th>Total Activity</th>
+                <th>Request Type</th>
+                <th>Request For</th>
+                <th>Requisite Name</th>
+                <th>Requisite Number</th>
             </tr>
             <tr>
-                <td><a href="">Neeraj</a></td>
+                <td><a href="">sk8424</a></td>
                 <td><a href="">4 June 2023</a></td>
-                <td><a href="">Mumbai</a></td>
-                <td><a href="">14s</a></td>
+                <td><a href="">Blacklist</a></td>
+                <td><a href="">Customer</a></td>
+                <td><a href="">Shivam Kumar</a></td>
+                <td><a href="">8447377952</a></td>
             </tr>
             <tr>
-                <td><a href="">Neeraj</a></td>
+                <td><a href="">sk8424</a></td>
                 <td><a href="">4 June 2023</a></td>
-                <td><a href="">Bihar</a></td>
-                <td><a href="">14s</a></td>
-            </tr>
-            <tr>
-                <td><a href="">Neeraj</a></td>
-                <td><a href="">4 June 2023</a></td>
-                <td><a href="">Jaipur</a></td>
-                <td><a href="">14s</a></td>
-            </tr>
-            <tr>
-                <td><a href="">Neeraj</a></td>
-                <td><a href="">4 June 2023</a></td>
-                <td><a href="">Haryan</a></td>
-                <td><a href="">14s</a></td>
+                <td><a href="">Blacklist</a></td>
+                <td><a href="">Customer</a></td>
+                <td><a href="">Shivam Kumar</a></td>
+                <td><a href="">8447377952</a></td>
             </tr>
         </table>
     </div>
 
-    <div class="search_results">
-        <h2>Results</h2>
-        <form action="">
-            <table>
-                <tr>
-                    <th>S. No</th>
-                    <th>Order ID</th>
-                    <th>Barcode ID</th>
-                    <th>Product Name</th>
-                    <th>Dispatched For</th>
-                    <th> QTY</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>12356</td>
-                    <td>123ABC</td>
-                    <td>Apple PRO</td>
-                    <td><span id="state">Delhi</span> <span id="city">Kapashera</span> <span id="pincode">110037</span>
-                    </td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>12356</td>
-                    <td>123ABC</td>
-                    <td>Apple PRO</td>
-                    <td>Mumbai</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>12356</td>
-                    <td>123ABC</td>
-                    <td>Apple PRO</td>
-                    <td>Mumbai</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>12356</td>
-                    <td>123ABC</td>
-                    <td>Apple PRO</td>
-                    <td>Mumbai</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>12356</td>
-                    <td>123ABC</td>
-                    <td>Apple PRO</td>
-                    <td>Mumbai</td>
-                    <td>5</td>
-                </tr>
-            </table>
-
-            <section>
-                <label for="">Sort By</label>
-                <select name="" id="">
-                    <option value="Old To New">Old To New</option>
-                    <option value="New to Old">New to Old</option>
-                </select>
-            </section>
-        </form>
+    <section>
+        <label for="">Sort By</label>
+        <select name="" id="">
+            <option value="Old To New">Old To New</option>
+            <option value="New to Old">New to Old</option>
+        </select>
+    </section>
+    </form>
+    </div>
+    <div class="total-container">
+        <p>Total -</p>
+        <p>2</p>
     </div>
 </body>
 
