@@ -334,6 +334,23 @@ header nav .cart-navigation .cart-icon .items-count {
   cursor: pointer;
 }
 
+@media (max-width:750px){
+  .signup-container .signup-hero .signup-image{
+    display: none;
+  }
+    .signup-container .signup-hero .signup-details form {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+        .signup-container .signup-hero .signup-details form section input{
+          width: 100%;
+        }
+}
+
 .login-container {
   margin: 3em 1em;
 }
